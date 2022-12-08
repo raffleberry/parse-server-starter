@@ -1,12 +1,19 @@
 # Parse Server Starter
 
-# Setup
+# Local Development (Docker)
 ```
 cp .env.dev .env
 docker compose up -d
 npm i
 npm start
 ```
+## quick links
+
+### parse server url
+> [http://localhost:1337/parse/health](http://localhost:1337/parse/health)
+
+### parse server dashboard
+> [http://localhost:4040/](http://localhost:4040/)
 
 # Local Development
 
