@@ -1,4 +1,4 @@
-describe('Parse Server example', () => {
+describe('Parse Server', () => {
   Parse.User.enableUnsafeCurrentUser();
   it('call function', async () => {
     const result = await Parse.Cloud.run('hello');
@@ -24,13 +24,6 @@ describe('Parse Server example', () => {
       url: 'http://localhost:30001/',
     });
     expect(headers['content-type']).toContain('text/html');
-    expect(text).toBe('I dream of being a website.  Please star the parse-server repo on GitHub!');
-  });
-  it('coverage for /test', async () => {
-    const { text, headers } = await Parse.Cloud.httpRequest({
-      url: 'http://localhost:30001/test',
-    });
-    expect(headers['content-type']).toContain('text/html');
-    expect(text).toContain('<title>Parse Server Example</title>');
+    expect(text).toBe('Ok');
   });
 });
